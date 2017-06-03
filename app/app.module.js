@@ -16,6 +16,9 @@ var dish_service_1 = require("./dishes/shared/dish.service");
 var toastr_service_1 = require("./common/toastr.service");
 var dish_detail_component_1 = require("./dishes/dishDetails/dish-detail.component");
 var routes_1 = require("./routes");
+var create_dish_component_1 = require("./dishes/create-dish.component");
+var error404_component_1 = require("./errors/error404.component");
+var dish_route_activator_service_1 = require("./dishes/dishDetails/dish-route-activator.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -30,9 +33,11 @@ AppModule = __decorate([
             dishes_list_component_1.DishesListComponent,
             dishes_cards_component_1.DishesCardsComponent,
             nav_component_1.NavComponent,
-            dish_detail_component_1.DishDetailComponent],
+            dish_detail_component_1.DishDetailComponent,
+            create_dish_component_1.CreateDishComponent,
+            error404_component_1.Error404Component],
         bootstrap: [dishes_app_component_1.DishesAppComponent],
-        providers: [dish_service_1.DishService, toastr_service_1.ToastrService]
+        providers: [dish_service_1.DishService, toastr_service_1.ToastrService, dish_route_activator_service_1.DishRouteActivatorService]
     })
 ], AppModule);
 exports.AppModule = AppModule;
