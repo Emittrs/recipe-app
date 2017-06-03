@@ -7,11 +7,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var router_1 = require("@angular/router");
 var dishes_app_component_1 = require("./dishes.app.component");
 var dishes_list_component_1 = require("./dishes/dishes-list.component");
 var dishes_cards_component_1 = require("./dishes/dishes-cards.component");
 var nav_component_1 = require("./nav/nav.component");
 var dish_service_1 = require("./dishes/shared/dish.service");
+var toastr_service_1 = require("./common/toastr.service");
+var dish_detail_component_1 = require("./dishes/dishDetails/dish-detail.component");
+var routes_1 = require("./routes");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,13 +23,16 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
+        imports: [platform_browser_1.BrowserModule,
+            router_1.RouterModule.forRoot(routes_1.appRoutes)
+        ],
         declarations: [dishes_app_component_1.DishesAppComponent,
             dishes_list_component_1.DishesListComponent,
             dishes_cards_component_1.DishesCardsComponent,
-            nav_component_1.NavComponent],
+            nav_component_1.NavComponent,
+            dish_detail_component_1.DishDetailComponent],
         bootstrap: [dishes_app_component_1.DishesAppComponent],
-        providers: [dish_service_1.DishService]
+        providers: [dish_service_1.DishService, toastr_service_1.ToastrService]
     })
 ], AppModule);
 exports.AppModule = AppModule;

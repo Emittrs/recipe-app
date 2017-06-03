@@ -9,27 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var dish_service_1 = require("./shared/dish.service");
-var toastr_service_1 = require(".././common/toastr.service");
-var DishesListComponent = (function () {
-    function DishesListComponent(dishService, toastrService) {
+var router_1 = require("@angular/router");
+var dish_service_1 = require("../shared/dish.service");
+var DishDetailComponent = (function () {
+    function DishDetailComponent(dishService, activatedRoute) {
         this.dishService = dishService;
-        this.toastrService = toastrService;
+        this.activatedRoute = activatedRoute;
     }
-    DishesListComponent.prototype.showToast = function (typeOfDish) {
-        this.toastrService.success(typeOfDish);
+    DishDetailComponent.prototype.ngOnInit = function () {
+        this.dish = this.dishService.getDish(+this.activatedRoute.snapshot.params['id']);
     };
-    DishesListComponent.prototype.ngOnInit = function () {
-        this.dishes = this.dishService.getDishes();
-    };
-    return DishesListComponent;
+    return DishDetailComponent;
 }());
-DishesListComponent = __decorate([
+DishDetailComponent = __decorate([
     core_1.Component({
-        selector: "dishes-list",
-        templateUrl: 'app/dishes/dishes-list.component.html'
+        templateUrl: '/app/dishes/dishDetails/dish-detail.component.html'
     }),
-    __metadata("design:paramtypes", [dish_service_1.DishService, toastr_service_1.ToastrService])
-], DishesListComponent);
-exports.DishesListComponent = DishesListComponent;
-//# sourceMappingURL=dishes-list.component.js.map
+    __metadata("design:paramtypes", [dish_service_1.DishService, router_1.ActivatedRoute])
+], DishDetailComponent);
+exports.DishDetailComponent = DishDetailComponent;
+//# sourceMappingURL=dish-detail.component.js.map

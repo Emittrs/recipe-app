@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: "dishes-app",
   template: `
     <nav-bar></nav-bar>
-    <dishes-list></dishes-list>`
+    <router-outlet></router-outlet>`
 })
 export class DishesAppComponent{
 

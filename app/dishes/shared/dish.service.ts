@@ -3,12 +3,17 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DishService{
   getDishes(){
-    return events;
+    return dishes;
+  }
+
+  getDish(id:number){
+    return dishes.find(dish=> dish.id === id)
   }
 }
 
-const events = [
+const dishes = [
     	{
+        id: 1,
         typeOfDish: "Ukwa",
         recipes: [{name: 'yorita',
                   author: 'Kennedy',
@@ -21,10 +26,11 @@ const events = [
         history: " justo at lacus. Nulla vehicula sit amet ipsum id ornare. Donec molestie viverra odio. Sed eros dolor, lacinia dapibus varius quis, placerat et risus. Integer nulla lectus, pretium quis vehicula ut, tincidunt vitae urna. Maecenas vitae lacus non mi venenatis hendrerit a quis augue. Praesent accumsan id diam a vulputate. Phasellus quis finibus sapien",
         nutrients: 'gravida mauris, id mollis sem blandit ut. Etiam porttitor leo euismod lorem consequat ullamcorper. Mauris nibh justo',
         createdAt: 56744,
-        image: '../../assets/images/jollof_rice.png'
+        image: '../../../app/assets/images/jollof_rice.png'
 
       },
       {
+        id: 2,
         typeOfDish: "Amala and Ewedu",
         recipes: [{name: 'mimieni',
                   author: 'Nnamid',
@@ -37,10 +43,11 @@ const events = [
         history: " justo at lacus. Nulla vehicula sit amet ipsum id ornare. Donec molestie viverra odio. Sed eros dolor, lacinia dapibus varius quis, placerat et risus. Integer nulla lectus, pretium quis vehicula ut, tincidunt vitae urna. Maecenas vitae lacus non mi venenatis hendrerit a quis augue. Praesent accumsan id diam a vulputate. Phasellus quis finibus sapien",
         nutrients: 'gravida mauris, id mollis sem blandit ut. Etiam porttitor leo euismod lorem consequat ullamcorper. Mauris nibh justo',
         createdAt: 56744,
-        image: '../../assets/images/jollof_rice.png'
+        image: '../../../app/assets/images/jollof_rice.png'
 
       },
       {
+        id: 3,
         typeOfDish: "Ukwa",
         recipes: [{name: 'Foo',
                   author: 'Andrew',
@@ -53,9 +60,10 @@ const events = [
         history: " justo at lacus. Nulla vehicula sit amet ipsum id ornare. Donec molestie viverra odio. Sed eros dolor, lacinia dapibus varius quis, placerat et risus. Integer nulla lectus, pretium quis vehicula ut, tincidunt vitae urna. Maecenas vitae lacus non mi venenatis hendrerit a quis augue. Praesent accumsan id diam a vulputate. Phasellus quis finibus sapien",
         nutrients: 'gravida mauris, id mollis sem blandit ut. Etiam porttitor leo euismod lorem consequat ullamcorper. Mauris nibh justo',
         createdAt: 56744,
-        image: '../../assets/images/jollof_rice.png'
+        image: '../../../app/assets/images/jollof_rice.png'
       },
       {
+        id: 4,
         typeOfDish: "Ukwa",
         recipes: [{name: 'Foo',
                   author: 'Andrew',
@@ -68,6 +76,6 @@ const events = [
         history: " justo at lacus. Nulla vehicula sit amet ipsum id ornare. Donec molestie viverra odio. Sed eros dolor, lacinia dapibus varius quis, placerat et risus. Integer nulla lectus, pretium quis vehicula ut, tincidunt vitae urna. Maecenas vitae lacus non mi venenatis hendrerit a quis augue. Praesent accumsan id diam a vulputate. Phasellus quis finibus sapien",
         nutrients: 'gravida mauris, id mollis sem blandit ut. Etiam porttitor leo euismod lorem consequat ullamcorper. Mauris nibh justo',
         createdAt: 56744,
-        image: '../../assets/images/jollof_rice.png'
+        image: '../../../app/assets/images/jollof_rice.png'
       }
     ]

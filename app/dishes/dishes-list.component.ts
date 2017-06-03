@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DishService } from './shared/dish.service'
+import { ToastrService } from '.././common/toastr.service';
 
 @Component({
   selector: "dishes-list",
@@ -8,9 +9,12 @@ import { DishService } from './shared/dish.service'
 })
 
 export class DishesListComponent implements OnInit{
-  dishes:any[]
-  constructor(private dishService: DishService){
+  dishes:any[];
+  constructor(private dishService: DishService, private toastrService: ToastrService){
+  }
 
+  showToast(typeOfDish:string){
+    this.toastrService.success(typeOfDish);
   }
   ngOnInit(){
     this.dishes = this.dishService.getDishes();

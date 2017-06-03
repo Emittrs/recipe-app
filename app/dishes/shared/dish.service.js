@@ -10,7 +10,10 @@ var DishService = (function () {
     function DishService() {
     }
     DishService.prototype.getDishes = function () {
-        return events;
+        return dishes;
+    };
+    DishService.prototype.getDish = function (id) {
+        return dishes.find(function (dish) { return dish.id === id; });
     };
     return DishService;
 }());
@@ -18,8 +21,9 @@ DishService = __decorate([
     core_1.Injectable()
 ], DishService);
 exports.DishService = DishService;
-var events = [
+var dishes = [
     {
+        id: 1,
         typeOfDish: "Ukwa",
         recipes: [{ name: 'yorita',
                 author: 'Kennedy',
@@ -32,9 +36,10 @@ var events = [
         history: " justo at lacus. Nulla vehicula sit amet ipsum id ornare. Donec molestie viverra odio. Sed eros dolor, lacinia dapibus varius quis, placerat et risus. Integer nulla lectus, pretium quis vehicula ut, tincidunt vitae urna. Maecenas vitae lacus non mi venenatis hendrerit a quis augue. Praesent accumsan id diam a vulputate. Phasellus quis finibus sapien",
         nutrients: 'gravida mauris, id mollis sem blandit ut. Etiam porttitor leo euismod lorem consequat ullamcorper. Mauris nibh justo',
         createdAt: 56744,
-        image: '../../assets/images/jollof_rice.png'
+        image: '../../../app/assets/images/jollof_rice.png'
     },
     {
+        id: 2,
         typeOfDish: "Amala and Ewedu",
         recipes: [{ name: 'mimieni',
                 author: 'Nnamid',
@@ -46,9 +51,10 @@ var events = [
         history: " justo at lacus. Nulla vehicula sit amet ipsum id ornare. Donec molestie viverra odio. Sed eros dolor, lacinia dapibus varius quis, placerat et risus. Integer nulla lectus, pretium quis vehicula ut, tincidunt vitae urna. Maecenas vitae lacus non mi venenatis hendrerit a quis augue. Praesent accumsan id diam a vulputate. Phasellus quis finibus sapien",
         nutrients: 'gravida mauris, id mollis sem blandit ut. Etiam porttitor leo euismod lorem consequat ullamcorper. Mauris nibh justo',
         createdAt: 56744,
-        image: '../../assets/images/jollof_rice.png'
+        image: '../../../app/assets/images/jollof_rice.png'
     },
     {
+        id: 3,
         typeOfDish: "Ukwa",
         recipes: [{ name: 'Foo',
                 author: 'Andrew',
@@ -61,9 +67,10 @@ var events = [
         history: " justo at lacus. Nulla vehicula sit amet ipsum id ornare. Donec molestie viverra odio. Sed eros dolor, lacinia dapibus varius quis, placerat et risus. Integer nulla lectus, pretium quis vehicula ut, tincidunt vitae urna. Maecenas vitae lacus non mi venenatis hendrerit a quis augue. Praesent accumsan id diam a vulputate. Phasellus quis finibus sapien",
         nutrients: 'gravida mauris, id mollis sem blandit ut. Etiam porttitor leo euismod lorem consequat ullamcorper. Mauris nibh justo',
         createdAt: 56744,
-        image: '../../assets/images/jollof_rice.png'
+        image: '../../../app/assets/images/jollof_rice.png'
     },
     {
+        id: 4,
         typeOfDish: "Ukwa",
         recipes: [{ name: 'Foo',
                 author: 'Andrew',
@@ -76,7 +83,7 @@ var events = [
         history: " justo at lacus. Nulla vehicula sit amet ipsum id ornare. Donec molestie viverra odio. Sed eros dolor, lacinia dapibus varius quis, placerat et risus. Integer nulla lectus, pretium quis vehicula ut, tincidunt vitae urna. Maecenas vitae lacus non mi venenatis hendrerit a quis augue. Praesent accumsan id diam a vulputate. Phasellus quis finibus sapien",
         nutrients: 'gravida mauris, id mollis sem blandit ut. Etiam porttitor leo euismod lorem consequat ullamcorper. Mauris nibh justo',
         createdAt: 56744,
-        image: '../../assets/images/jollof_rice.png'
+        image: '../../../app/assets/images/jollof_rice.png'
     }
 ];
 //# sourceMappingURL=dish.service.js.map

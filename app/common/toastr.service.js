@@ -6,16 +6,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var DishesAppComponent = (function () {
-    function DishesAppComponent() {
+var ToastrService = (function () {
+    function ToastrService() {
     }
-    return DishesAppComponent;
+    ToastrService.prototype.success = function (title) {
+        toastr.success(title);
+    };
+    ToastrService.prototype.error = function (title) {
+        toastr.error(title);
+    };
+    return ToastrService;
 }());
-DishesAppComponent = __decorate([
-    core_1.Component({
-        selector: "dishes-app",
-        template: "\n    <nav-bar></nav-bar>\n    <router-outlet></router-outlet>"
-    })
-], DishesAppComponent);
-exports.DishesAppComponent = DishesAppComponent;
-//# sourceMappingURL=dishes.app.component.js.map
+ToastrService = __decorate([
+    core_1.Injectable()
+], ToastrService);
+exports.ToastrService = ToastrService;
+//# sourceMappingURL=toastr.service.js.map
