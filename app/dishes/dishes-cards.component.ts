@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'dishes-cards',
   template: `
-  <div>
+  <div [routerLink]= "['/dishes', dish.id]">
     	<img [src]="dish?.image">
       <p> Type of Dish: {{dish?.typeOfDish}}</p>
       <p> Recipe Name:{{dish?.recipes[0].name}}</p>

@@ -21,7 +21,7 @@ __decorate([
 DishesCardsComponent = __decorate([
     core_1.Component({
         selector: 'dishes-cards',
-        template: "\n  <div>\n    \t<img [src]=\"dish?.image\">\n      <p> Type of Dish: {{dish?.typeOfDish}}</p>\n      <p> Recipe Name:{{dish?.recipes[0].name}}</p>\n      <p> Author: {{dish?.recipes[0].author}}</p>\n      <p [hidden]=\"!dish?.recipes[0].likes\"> Likes: {{dish?.recipes[0].likes}}</p>\n      <p [hidden]=\"!dish?.recipes[0].views\"> Views: {{dish?.recipes[0].views}}</p>\n  </div>\n\n  "
+        template: "\n  <div [routerLink]= \"['/dishes', dish.id]\">\n    \t<img [src]=\"dish?.image\">\n      <p> Type of Dish: {{dish?.typeOfDish}}</p>\n      <p> Recipe Name:{{dish?.recipes[0].name}}</p>\n      <p> Author: {{dish?.recipes[0].author}}</p>\n      <p [hidden]=\"!dish?.recipes[0].likes\"> Likes: {{dish?.recipes[0].likes}}</p>\n      <p [hidden]=\"!dish?.recipes[0].views\"> Views: {{dish?.recipes[0].views}}</p>\n  </div>\n\n  "
     })
 ], DishesCardsComponent);
 exports.DishesCardsComponent = DishesCardsComponent;
